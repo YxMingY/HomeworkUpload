@@ -33,7 +33,6 @@
     if(name_exists($_POST["name"])){
       echo '<img id="hw-img" src="commited.jpg">';
 	    		file_put_contents("images/".$_POST["name"].".jpg",file_get_contents($file["tmp_name"]));
-  		   	echo "上传成功";
     }else{
       echo
 		    	' <img id="hw-img" src="non-exists.jpg">

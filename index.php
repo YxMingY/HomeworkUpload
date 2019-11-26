@@ -30,7 +30,7 @@
    }else{
      $pic = "non-commited.jpg";
    }
-   echo '<div class="item"><img class="img" src='.$pic.'>'.$name.'</div>';
+   echo '<a href="'.get_pic($name).'"><div class="item"><img class="img" src='.$pic.'>'.$name.'</div></a>';
 			}
 		?>
 	</div>
