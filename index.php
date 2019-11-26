@@ -12,16 +12,25 @@
 			<?php
 				$commited = 5;
 				$total = 5;
-				echo '今日已交'.$commited.'人，应交'.$total.'人';
+				//echo '今日已交'.$commited.'人，应交'.$total.'人';
+			//			<a href="non-commited.php">查看未交名单</a>
 			?>
-			&nbsp;
-			<a href="non-commited.php">查看未交名单</a> 
+			&nbsp; 
 			&nbsp;
 			<a href="commit.php">提交作业</a>
 		</div>
 		<?php
+			require "data.php";
 			foreach(explode("\n",file_get_contents('名单.txt')) as $name){
-				echo '<div class="item"><img class="img" src=non-commited.jpg></img>'.$name.'</div>';
+   if(is_commited($name)){
+		  		$im = imagecreatefromjpeg(get_pic($name));
+     imagejpeg($im,'images/comp_'.$name.'.jpg',1);
+     imagedestroy($im);
+     $pic = 'images/comp_'.$name.'.jpg';
+   }else{
+     $pic = "non-commited.jpg";
+   }
+   echo '<div class="item"><img class="img" src='.$pic.'>'.$name.'</div>';
 			}
 		?>
 	</div>

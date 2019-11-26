@@ -12,7 +12,7 @@ function get_commited_list():array
   $list = [];
   $imgs = array_diff(scandir("images"),array('..','.'));
   foreach($imgs as $img){
-    $list[] = substr(0,strrpos($img,"."),$img);
+    $list[] = substr($img,0,strrpos($img,"."));
   }
   return $list;
 }
