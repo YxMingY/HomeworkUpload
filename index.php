@@ -21,7 +21,7 @@
 		</div>
 		<?php
 			foreach(explode("\n",file_get_contents('名单.txt')) as $name){
-				echo '<div class="item"><img class="img" src=920152b13571a9a38f7f3c98ec5a6b3f_122_122.jpg></img>'.$name.'</div>';
+				echo '<div class="item"><img class="img" src=non-commited.jpg></img>'.$name.'</div>';
 			}
 		?>
 	</div>
