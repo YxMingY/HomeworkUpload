@@ -1,7 +1,11 @@
 <?php
 function get_namelist():array
 {
-  return explode("\n",file_get_contents('名单.txt'));
+  $arr = explode("\n",file_get_contents('名单.txt'));
+  foreach ($arr as &$name) {
+   $name = trim($name);
+  }
+  return $arr;
 }
 function name_exists(string $name):bool
 {

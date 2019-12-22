@@ -21,7 +21,7 @@
 		</div>
 		<?php
 			require "data.php";
-			foreach(explode("\n",file_get_contents('名单.txt')) as $name){
+			foreach(get_namelist() as $name){
    if(is_commited($name)){
 		  		$im = imagecreatefromjpeg(get_pic($name));
      imagejpeg($im,'images/comp_'.$name.'.jpg',1);
