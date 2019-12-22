@@ -5,7 +5,7 @@
 	<title>家庭作业提交系统</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body id="index">
 	<div id="main">
 		<div id="title">家庭作业提交系统</div>
 		<div id="nav">
@@ -30,7 +30,7 @@
    }else{
      $pic = "non-commited.jpg";
    }
-   echo '<a href="'.get_pic($name).'"><div class="item"><img class="img" src='.$pic.'>'.$name.'</div></a>';
+   echo '<div class="item"><a href="'.get_pic($name).'"><img class="img" src='.$pic.'></a>'.$name.'</div>';
 			}
 		?>
 	</div>

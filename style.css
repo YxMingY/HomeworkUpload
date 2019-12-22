@@ -5,15 +5,28 @@
 	list-style-type: none;
 	font-family: arial;
 }
+#index{
+	background-color: #ffc107
+}
 #main{
 	width: 942px;
 	margin: 0 auto;
+	//display: inline-block;
+	background-color: rgb(255,255,255);
+	border: 3px solid rgba(0,0,0,0.25);
+	border-radius: 40px;
+}
+#main::after {
+	content:"";
+	display: block;
+	clear: both;
 }
 #nav{
 	height: 50px;
 	border-bottom: 3px solid rgba(0,0,0,0.25);
     line-height: 50px;
 	font-size: 30px;
+	border-radius: 40px;
 }
 #title{
 	border-bottom: 3px solid rgba(0,0,0,0.25);
